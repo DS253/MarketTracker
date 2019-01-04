@@ -3,12 +3,18 @@ PODS:
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
   - FaveButton (3.0.0)
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (~> 3.5)
   - FaveButton
+  - RealmSwift
   - SwiftyJSON
 
 SPEC REPOS:
@@ -16,14 +22,18 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - FaveButton
+    - Realm
+    - RealmSwift
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   FaveButton: 1fa9cd7b037d7164e229765401931271adbe3a23
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: e4df9341ede511dd9c2d358b3982d60619ac4bf5
+PODFILE CHECKSUM: e82432ac906887113307f11ffb330503aba0c5d7
 
 COCOAPODS: 1.5.3
