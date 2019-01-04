@@ -8,6 +8,7 @@ target 'CoinTracker' do
   # Pods for CoinTracker
   pod 'Alamofire'
   pod 'AlamofireImage', '~> 3.5' 
+  pod 'RealmSwift' 
   pod 'SwiftyJSON'
   pod 'FaveButton'
  
