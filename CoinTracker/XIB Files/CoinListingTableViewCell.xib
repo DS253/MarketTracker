@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CoinListingCell" id="KGk-i7-Jjw" customClass="CoinListingTableViewCell" customModule="CoinTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="47.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnh-dG-95R" userLabel="Image Container">
+                        <rect key="frame" x="0.0" y="0.0" width="105" height="47.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Of1-EW-jEZ">
+                                <rect key="frame" x="0.0" y="2" width="44" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="CCV-E9-Tm5"/>
+                                    <constraint firstAttribute="height" constant="44" id="pRx-Rg-KLL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MIOTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="e7e-48-7mJ">
+                                <rect key="frame" x="49" y="0.0" width="51" height="47.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Of1-EW-jEZ" firstAttribute="centerY" secondItem="Gnh-dG-95R" secondAttribute="centerY" id="4Id-Ws-EvD"/>
+                            <constraint firstItem="e7e-48-7mJ" firstAttribute="leading" secondItem="Of1-EW-jEZ" secondAttribute="trailing" constant="5" id="HaL-lZ-J8s"/>
+                            <constraint firstItem="e7e-48-7mJ" firstAttribute="height" secondItem="Gnh-dG-95R" secondAttribute="height" id="Hoi-T3-VFI"/>
+                            <constraint firstItem="Of1-EW-jEZ" firstAttribute="leading" secondItem="Gnh-dG-95R" secondAttribute="leading" id="PWe-wy-ggm"/>
+                            <constraint firstItem="e7e-48-7mJ" firstAttribute="centerY" secondItem="Gnh-dG-95R" secondAttribute="centerY" id="XNj-Ap-u0Y"/>
+                            <constraint firstAttribute="trailing" secondItem="e7e-48-7mJ" secondAttribute="trailing" constant="5" id="nDv-4x-gJ1"/>
+                            <constraint firstAttribute="width" constant="105" id="vYG-Ck-Sme"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqF-nK-rhY" customClass="FaveButton" customModule="FaveButton">
+                        <rect key="frame" x="326" y="2" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="OjR-Lu-AcW"/>
+                            <constraint firstAttribute="width" constant="44" id="q7N-7V-kn0"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="Star"/>
+                        <connections>
+                            <action selector="faveButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="y0u-Sg-Vao"/>
+                        </connections>
+                    </button>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gbc-86-0Rb">
+                        <rect key="frame" x="115" y="0.0" width="201" height="47.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="UDo-gP-Tjg">
+                                <rect key="frame" x="0.0" y="0.0" width="98" height="47.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="jZZ-Jy-Ng6">
+                                <rect key="frame" x="103" y="0.0" width="98" height="47.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Gnh-dG-95R" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="5VS-cQ-asO"/>
+                    <constraint firstItem="Gnh-dG-95R" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="L54-hl-nTF"/>
+                    <constraint firstItem="Gbc-86-0Rb" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="OUa-G4-Mj8"/>
+                    <constraint firstItem="nqF-nK-rhY" firstAttribute="leading" secondItem="Gbc-86-0Rb" secondAttribute="trailing" constant="10" id="cYT-gD-LIq"/>
+                    <constraint firstAttribute="trailing" secondItem="nqF-nK-rhY" secondAttribute="trailing" constant="5" id="flU-jv-iRr"/>
+                    <constraint firstItem="Gbc-86-0Rb" firstAttribute="leading" secondItem="Gnh-dG-95R" secondAttribute="trailing" constant="10" id="fpE-HF-hbK"/>
+                    <constraint firstItem="nqF-nK-rhY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="h4h-Ae-OVQ"/>
+                    <constraint firstItem="Gbc-86-0Rb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="huj-h6-jgM"/>
+                    <constraint firstItem="Gnh-dG-95R" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="la5-wa-UL2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="coinImage" destination="Of1-EW-jEZ" id="SKu-2L-uyS"/>
+                <outlet property="coinPriceLabel" destination="UDo-gP-Tjg" id="UXQ-wi-J15"/>
+                <outlet property="coinSymbolLabel" destination="e7e-48-7mJ" id="Baj-C0-nUv"/>
+                <outlet property="faveButton" destination="nqF-nK-rhY" id="2Xg-yW-Ezc"/>
+                <outlet property="imageContainer" destination="Gnh-dG-95R" id="67Q-LY-y7Q"/>
+                <outlet property="percentageChangeLabel" destination="jZZ-Jy-Ng6" id="27g-80-TBl"/>
+            </connections>
+            <point key="canvasLocation" x="138.40000000000001" y="154.72263868065968"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Star" width="128" height="128"/>
+    </resources>
+</document>
