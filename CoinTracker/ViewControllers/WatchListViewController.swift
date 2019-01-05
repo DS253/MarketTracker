@@ -2,7 +2,7 @@ import UIKit
 
 class WatchListViewController: CommonTabBarViewController
 {
-    internal var watchlist = [CoinModel]()
+    internal var watchlist = [Coin]()
     @IBOutlet weak var watchlistTable: UITableView!
     @IBOutlet weak var emptyContainer: UIView!
     @IBOutlet weak var emptyLabel: UILabel!
@@ -76,9 +76,9 @@ extension WatchListViewController: UITableViewDelegate, UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: ViewIdentifiers.CoinListingsCell, for: indexPath) as! CoinListingTableViewCell
         cell.delegate = self
-        let coinModel = watchlist[indexPath.row]
+        let coin = watchlist[indexPath.row]
         cell.set((themeManager?.selectedTheme)!)
-        cell.populateWith(coinModel)
+        cell.populateWith(coin)
         cell.faveButton.isSelected = true
         
         return cell
@@ -102,12 +102,12 @@ extension WatchListViewController: CoinListCellDelegate
 // MARK - Watchlist Update Protocol
 extension WatchListViewController: WatchlistUpdateProtocol
 {
-    func addToWatchlist(_ coin: CoinModel)
+    func addToWatchlist(_ coin: Coin)
     {
         watchlist.append(coin)
     }
     
-    func removeFromWatchlist(_ coin: CoinModel)
+    func removeFromWatchlist(_ coin: Coin)
     {
         if let row = watchlist.firstIndex(of: coin)
         {

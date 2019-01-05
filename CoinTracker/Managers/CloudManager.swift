@@ -11,14 +11,14 @@ final class CloudManager
                    "Accept" : "application/json"
     ]
     
-    func getCoinList(completionHandler: @escaping ([CoinModel]?) -> Void)
+    func getCoinList(completionHandler: @escaping ([Coin]?) -> Void)
     {
         Alamofire.request(URLBuilder.latestCoinsURL(), method: .get, headers: header).responseJSON {
             response in
             if response.result.isSuccess
             {
                 let coinJSON = JSON(response.result.value!)
-                completionHandler(CoinModel.parseCoinModel(data: coinJSON))
+                completionHandler(Coin.parseCoinData(data: coinJSON))
             }
             else
             {
@@ -31,9 +31,9 @@ final class CloudManager
 // MARK - This worked until I made a couple changes in the helper methods to parse the data. Commented out until
 //        app design decisions are made.
     
-//    func getCoinMetadata(coinList: [CoinModel], onCompletion: @escaping (Bool) -> Void)
+//    func getCoinMetadata(coinList: [Coin], onCompletion: @escaping (Bool) -> Void)
 //    {
-//        let coinSymbols = CoinModel.getCoinSymbols(coins: coinList)
+//        let coinSymbols = Coin.getCoinSymbols(coins: coinList)
 //        let url = URLBuilder.coinMetadataURL(symbols: coinSymbols)
 //        Alamofire.request(url, method: .get).responseJSON {
 //            response in

@@ -6,7 +6,7 @@ final class PersistenceManager
     static let sharedManager = PersistenceManager()
     let realm = try! Realm()
     
-    func save(coins: CoinModel)
+    func save(coins: [Coin])
     {
         do {
             try realm.write {

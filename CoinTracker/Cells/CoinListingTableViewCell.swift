@@ -21,7 +21,7 @@ class CoinListingTableViewCell: UITableViewCell
         faveButton.isSelected = false
     }
     
-    func populateWith(_ model: CoinModel)
+    func populateWith(_ model: Coin)
     {
         coinSymbolLabel.text = model.symbol
         coinPriceLabel.text = Double.priceToString(number: model.price)
