@@ -2,7 +2,7 @@ import UIKit
 
 class CoinListingsViewController: CommonTabBarViewController, CoinListServiceProtocol
 {
-    private var coinList = [CoinModel]()
+    private var coinList = [Coin]()
     internal var cloudManager: CloudManager?
     weak var watchlistDelegate: WatchlistUpdateProtocol?
     
@@ -79,11 +79,11 @@ extension CoinListingsViewController: UITableViewDelegate, UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: ViewIdentifiers.CoinListingsCell, for: indexPath) as! CoinListingTableViewCell
         cell.delegate = self
-        let coinModel = coinList[indexPath.row]
+        let coin = coinList[indexPath.row]
         cell.set((themeManager?.selectedTheme)!)
-        cell.populateWith(coinModel)
+        cell.populateWith(coin)
         
-        cell.faveButton.isSelected = watchlistDelegate?.watchlist.contains(coinModel) ?? false
+        cell.faveButton.isSelected = watchlistDelegate?.watchlist.contains(coin) ?? false
         
         return cell
     }

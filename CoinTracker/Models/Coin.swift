@@ -3,7 +3,7 @@ import SwiftyJSON
 import Realm
 import RealmSwift
 
-class CoinModel : Object
+class Coin : Object
 {
     @objc dynamic var id = 0
     @objc dynamic var name = ""
@@ -55,29 +55,29 @@ class CoinModel : Object
     }
     
     // MARK - Equatable Protocol Method
-    static func == (lhs: CoinModel, rhs: CoinModel) -> Bool
+    static func == (lhs: Coin, rhs: Coin) -> Bool
     {
         return (lhs.symbol == rhs.symbol) && (lhs.name == rhs.name)
     }
 }
 
-extension CoinModel
+extension Coin
 {
-    class func parseCoinModel(data: JSON) -> [CoinModel]?
+    class func parseCoinData(data: JSON) -> [Coin]?
     {
-        var arrayOfCoins = [CoinModel]()
+        var arrayOfCoins = [Coin]()
         if let dataArray = data["data"].array
         {
             for index in 0...dataArray.count - 1
             {
-                let currentCoin = CoinModel(data: dataArray[index])
+                let currentCoin = Coin(data: dataArray[index])
                 arrayOfCoins.append(currentCoin)
             }
         }
         return arrayOfCoins
     }
     
-    class func getCoinSymbols(coins: [CoinModel]) -> [String]
+    class func getCoinSymbols(coins: [Coin]) -> [String]
     {
         var symbolNames = [String]()
         

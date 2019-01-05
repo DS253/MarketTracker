@@ -2,7 +2,7 @@ import Foundation
 
 protocol WatchlistUpdateProtocol: AnyObject
 {
-    var watchlist: [CoinModel] { get set }
-    func addToWatchlist(_ coin: CoinModel)
-    func removeFromWatchlist(_ coin: CoinModel)
+    var watchlist: [Coin] { get set }
+    func addToWatchlist(_ coin: Coin)
+    func removeFromWatchlist(_ coin: Coin)
 }
