@@ -1,25 +1,28 @@
 import Foundation
 import SwiftyJSON
+import Realm
+import RealmSwift
 
-class CoinModel
+class CoinModel : Object
 {
-    var id = 0
-    var name = ""
-    var symbol = ""
-    var slug = ""
-    var circulatingSupply = 0
-    var totalSupply = 0
-    var maxSupply = 0
-    var price = 0.0
-    var volume = 0.0
-    var percentChangeHour = 0.0
-    var percentChangeDay = 0.0
-    var percentChangeWeek = 0.0
-    var marketCap = 0.0
-    var logoURL = ""
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
+    @objc dynamic var symbol = ""
+    @objc dynamic var slug = ""
+    @objc dynamic var circulatingSupply = 0
+    @objc dynamic var totalSupply = 0
+    @objc dynamic var maxSupply = 0
+    @objc dynamic var price = 0.0
+    @objc dynamic var volume = 0.0
+    @objc dynamic var percentChangeHour = 0.0
+    @objc dynamic var percentChangeDay = 0.0
+    @objc dynamic var percentChangeWeek = 0.0
+    @objc dynamic var marketCap = 0.0
+    @objc dynamic var logoURL = ""
     
     init(data: JSON)
     {
+        super.init()
         id = data["id"].intValue
         name = data["name"].stringValue
         symbol = data["symbol"].stringValue
@@ -36,6 +39,25 @@ class CoinModel
         percentChangeDay = priceData["percent_change_24h"].doubleValue
         percentChangeWeek = priceData["percent_change_7d"].doubleValue
         marketCap = priceData["market_cap"].doubleValue
+    }
+    
+    required init()
+    {
+        super.init()
+    }
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        fatalError("init(realm:schema:) has not been implemented")
+    }
+    
+    required init(value: Any, schema: RLMSchema) {
+        fatalError("init(value:schema:) has not been implemented")
+    }
+    
+    // MARK - Equatable Protocol Method
+    static func == (lhs: CoinModel, rhs: CoinModel) -> Bool
+    {
+        return (lhs.symbol == rhs.symbol) && (lhs.name == rhs.name)
     }
 }
 
@@ -64,13 +86,5 @@ extension CoinModel
             symbolNames.append(coins[index].symbol)
         }
         return symbolNames
-    }
-}
-
-extension CoinModel: Equatable
-{
-    static func == (lhs: CoinModel, rhs: CoinModel) -> Bool
-    {
-        return (lhs.symbol == rhs.symbol) && (lhs.name == rhs.name)
     }
 }

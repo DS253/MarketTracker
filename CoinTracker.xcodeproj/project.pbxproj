@@ -35,6 +35,7 @@
 		41629EF421CDA5B100901C94 /* CoinListingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41629EF321CDA5B100901C94 /* CoinListingsViewController.swift */; };
 		41629EF921CDAB4B00901C94 /* CoinListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41629EF721CDAB4B00901C94 /* CoinListingTableViewCell.swift */; };
 		41629EFA21CDAB4B00901C94 /* CoinListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41629EF821CDAB4B00901C94 /* CoinListingTableViewCell.xib */; };
+		417AEF4D21DF33FB003D6BAB /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417AEF4C21DF33FB003D6BAB /* PersistenceManager.swift */; };
 		418955B921DEDA90001BEEE1 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418955B821DEDA90001BEEE1 /* Keys.swift */; };
 		418DFFD221D6F3A9000B1D2B /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418DFFD121D6F3A9000B1D2B /* ThemeProtocol.swift */; };
 		419F88A621D6E5DC002EFAAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 419F88A521D6E5DC002EFAAD /* README.md */; };
@@ -75,6 +76,7 @@
 		41629EF321CDA5B100901C94 /* CoinListingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListingsViewController.swift; sourceTree = "<group>"; };
 		41629EF721CDAB4B00901C94 /* CoinListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListingTableViewCell.swift; sourceTree = "<group>"; };
 		41629EF821CDAB4B00901C94 /* CoinListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinListingTableViewCell.xib; sourceTree = "<group>"; };
+		417AEF4C21DF33FB003D6BAB /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		418955B821DEDA90001BEEE1 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		418DFFD121D6F3A9000B1D2B /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
 		419F88A521D6E5DC002EFAAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				41629EE821CC7CE800901C94 /* CloudManager.swift */,
+				417AEF4C21DF33FB003D6BAB /* PersistenceManager.swift */,
 				412F7D7121D0961900E60A2A /* ThemeManager.swift */,
 			);
 			path = Managers;
@@ -393,6 +396,7 @@
 				41629EF421CDA5B100901C94 /* CoinListingsViewController.swift in Sources */,
 				41548C3721D47AF400D5AE85 /* DayTheme.swift in Sources */,
 				412F7D6E21D054B300E60A2A /* MoreViewController.swift in Sources */,
+				417AEF4D21DF33FB003D6BAB /* PersistenceManager.swift in Sources */,
 				4103CC2E21D436AE00D2E439 /* MoreTableViewCell.swift in Sources */,
 				41A614A721CDE1C4006F0561 /* URLBuilder.swift in Sources */,
 				412F7D5D21D0390C00E60A2A /* Double+Extension.swift in Sources */,
