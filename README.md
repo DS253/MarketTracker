@@ -1,12 +1,12 @@
 # A Sample iOS Application
 
-This is a sample iOS application built over the holidays to show the fine ladies and gentlemen of Block.one that:
+This is a partial implementation of a Cryptocurrency Market Tracker. While incomplete, some takeaways:
 
   - I can build iOS applications!
-  - I have an enthusiasm for the blockchain!
-  - I still have decisions to make on the direction and design of the application!
+  - Code design can be determined from what has been implemented at this point.
+  - I still have decisions to make on the direction and design of the application
 
-Sure, it's not perfect. With the benefit of code reviews and team discussion, the design choices would be different. Naming conventions would be different. Hey, with a UI designer, the UI would look different! But this should demonstrate I have knowledge of standard design principles and know my way around Xcode and Interface Builder comfortably.
+Sure, it's not perfect (yet). With the benefit of code reviews and team discussion, the design choices would be different. Naming conventions would be different. Hey, with a UI designer, the UI would look different! But this should demonstrate I have knowledge of standard design principles and know my way around Xcode and Interface Builder comfortably.
 
 # Features
 
